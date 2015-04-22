@@ -1,0 +1,11 @@
+.overlay#overlay
+.new-project#new-project
+	h1 Create a new project
+	= form_for(@project, url: project_create_path, multipart: true, html: {class: 'formo'}) do |f|
+		.field
+			= f.text_field :name, placeholder: 'Project Name', autocomplete: 'off'
+		.field
+			= f.label :file,'File to review'
+			= f.file_field :file
+		.field
+			= f.submit 'Create'

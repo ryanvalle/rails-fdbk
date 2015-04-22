@@ -1,0 +1,8 @@
+-if @comments.present?
+	ul.comments data-id="#{params[:id]}"
+		- @comments.each do |comment|
+			li =comment.post
+- else
+	ul.comments
+		li No discussions around this comment
+= render partial: 'comment/partials/new', locals: {did: params[:id]}

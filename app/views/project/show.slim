@@ -1,0 +1,21 @@
+.wrapper
+	.preview
+		.preview-container
+			= image_tag @project.file, data: {file: params[:id]}
+			- @discussions.each do |discussion|
+				- coordinates = discussion.location.split(',')
+				.fdbk-disc data-id="#{discussion.id}" style="top: #{coordinates[0]}%; left: #{coordinates[1]}%"
+	.discussion
+		h2 = @project.name
+		.dynamic
+		.discussions
+			h3 Discussions
+			ul
+				- @discussions.each do |discussion|
+					li data-id="#{discussion.id}"
+						.discussion-title.user-select-none data-id="#{discussion.id}"
+							= discussion.details
+							span.toggle +
+						.comments-container
+javascript:
+	fdbk.actions.init(["add_point","select_point"])

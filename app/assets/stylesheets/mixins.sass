@@ -1,0 +1,28 @@
+=transform($prop)
+	-webkit-transform: $prop
+	-moz-transform: $prop
+	-ms-transform: $prop
+	transform: $prop
+
+=transition($prop...)
+	-webkit-transition: $prop
+	-moz-transition: $prop
+	-ms-transition: $prop
+	transition: $prop
+
+=animation($prop)
+	-webkit-animation: $prop
+	-moz-animation: $prop
+	-ms-animation: $prop
+	-o-animation: $prop
+	animation: $prop
+
+=keyframes($prop)
+	@-webkit-keyframes #{$prop}
+		@content
+	@-moz-keyframes #{$prop}
+		@content
+	@-ms-keyframes #{$prop}
+		@content
+	@keyframes #{$prop}
+		@content

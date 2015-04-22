@@ -1,0 +1,9 @@
+h4 Add new comment 
+= form_for(@discussion, url: discussion_create_path, remote: true, html: {class: 'formo', data: {id: params[:ts]}}) do |f|
+	= f.hidden_field :location, value: params[:loc]
+	= f.hidden_field :project_id, value: params[:file]
+	.field
+		= f.text_area :details, placeholder: 'Comment/Concern'
+	.field
+		= f.submit 'Create'
+		= f.submit 'Cancel', type: 'reset', class: 'cancel', id: 'cancel'

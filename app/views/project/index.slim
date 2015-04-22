@@ -1,0 +1,6 @@
+.container
+	- @projects.each do |project|
+		= link_to project_show_path(project.id), class: 'project' do
+			.preview style="background-image: url(#{project.file})"
+				span.title
+					= project.name

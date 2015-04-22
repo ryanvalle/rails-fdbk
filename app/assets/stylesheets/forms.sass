@@ -1,0 +1,34 @@
+form.formo
+	display: block
+	.field
+		width: 100%
+		margin: 10px 0
+	label
+		display: block
+	textarea
+		width: 100%
+		padding: 5px
+		height: 80px
+		outline: none
+		border: none
+	input
+		padding: 5px 10px
+		outline: none
+		font-family
+		&[type="text"], &[type="submit"], &[type="reset"]
+			width: 100%
+		&[type="file"]
+			margin: 5px 0
+			padding: 0
+		&[type="submit"], &[type="reset"]
+			border: #ccc
+			background: rgb(184, 242, 255)
+			cursor: pointer
+			margin: 2px 0
+		&[type="reset"]
+			background: rgba(255, 0, 0, 0.5)
+	&.slim
+		.field
+			margin: 0
+		input
+			margin: 0
